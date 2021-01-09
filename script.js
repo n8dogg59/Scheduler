@@ -6,8 +6,8 @@ $(document).ready(function() {
     var currentHour = moment().format("HH");
     console.log("current hour is " + currentHour);
 
-    // creates an array for the input elements and stores them in variable hourArr
-    var hourArr = $("input")
+    // creates an array for the textarea elements and stores them in variable hourArr
+    var hourArr = $("textarea")
 
     // for loop that checks the current time again the hour row and sets the color accordingly
     for (var i = 0; i < hourArr.length; i++) {
@@ -38,7 +38,7 @@ $(document).ready(function() {
     // when save button is clicked this function sends the key and value to local storage
     $(".saveBtn").on("click", function() {
         console.log($(this).siblings(".col-10").val());
-        var timeSave = $(this).siblings("input").attr("id");
+        var timeSave = $(this).siblings("textarea").attr("id");
         console.log(timeSave);
         var taskSave = $(this).siblings(".col-10").val();
         console.log(taskSave);
