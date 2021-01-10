@@ -5,7 +5,7 @@ Create a day planner where a user can add an event/events for each hour of the w
 
 ## Features
 * The current day will be displayed at the top so the user knows what day it is.
-* Once the user adds a event he can click the corresponding save button and the event will be saved in local storage.
+* Once the user adds an event the user can click the corresponding save button and the event will be saved in local storage.
 * The time blocks are color coded to let the user know what current event is due (red), what events are in the past (gray), and what events are in the future (green).
 * The color for the events will update without the browser needing to be updated.
 
