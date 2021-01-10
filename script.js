@@ -20,11 +20,10 @@ $(document).ready(function() {
 
     // function funs every second to see if the hour has changed to set the background color
     setInterval(function() {
-        //currentHour = moment().format("HH");
+        currentHour = moment().format("HH");
         for (var i = 0; i < hourArr.length; i++) {
             var timeId = $(hourArr[i]).attr("id");
-            console.log("current hour is " + currentHour);
-
+            
             if (currentHour > timeId) {
                 $(hourArr[i]).removeClass("bg-danger").addClass("bg-secondary")
             }
