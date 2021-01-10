@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
 
     // function funs every second to see if the hour has changed to set the background color
-    var checkTime = setInterval(function() {
+    setInterval(function() {
         for (var i = 0; i < hourArr.length; i++) {
             var timeId = $(hourArr[i]).attr("id");
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
                 $(hourArr[i]).addClass("bg-danger")
             }         
         }
-    }, 1000);
+    }, 5000);
 
     // when save button is clicked this function sends the key and value to local storage
     $(".saveBtn").on("click", function() {
