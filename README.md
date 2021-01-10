@@ -17,18 +17,13 @@ Create a day planner where a user can add an event/events for each hour of the w
 * CSS (almost all css was already provided)
 
 ## Website
-https://n8dogg59.github.io/friendly-parakeet/Develop
+https://n8dogg59.github.io/scheduler/
 
 ## Gitbub Repository
-https://github.com/n8dogg59/friendly-parakeet
+https://github.com/n8dogg59/scheduler
 
 ## Screenshot
-![](./Develop/lengthPrompt.jpg)
-![](./Develop/lowerPrompt.jpg)
-![](./Develop/upperPrompt.jpg)
-![](./Develop/numberPrompt.jpg)
-![](./Develop/charPrompt.jpg)
-![](./Develop/finalpassword.jpg)
+![](./screenshot/screencapture.jpg)
 
 ### Contribution
 Created by Nate Schroeder

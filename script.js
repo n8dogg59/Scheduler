@@ -3,18 +3,15 @@ $(document).ready(function() {
     $("#currentDay").text(moment().format('dddd MMMM Do, YYYY'));
 
     // get the current hour so that we can use this number to change the task descriptions background color
-    var currentHour = moment().format("HH");
-    console.log("current hour is " + currentHour);
+    var currentHour =  moment().format("HH");
 
     // creates an array for the textarea elements and stores them in variable hourArr
     var hourArr = $("textarea")
-
     // for loop that checks the current time again the hour row and sets the color accordingly
     for (var i = 0; i < hourArr.length; i++) {
         var timeId = $(hourArr[i]).attr("id");
-
         if (currentHour > timeId) {
-            $(hourArr[i]).addClass("bg-secondary text-light")
+            $(hourArr[i]).removeClass("bg-danger").addClass("bg-secondary")
         }
         else if (currentHour === timeId) {
             $(hourArr[i]).addClass("bg-danger")
@@ -23,17 +20,19 @@ $(document).ready(function() {
 
     // function funs every second to see if the hour has changed to set the background color
     setInterval(function() {
+        //currentHour = moment().format("HH");
         for (var i = 0; i < hourArr.length; i++) {
             var timeId = $(hourArr[i]).attr("id");
+            console.log("current hour is " + currentHour);
 
             if (currentHour > timeId) {
-                $(hourArr[i]).addClass("bg-secondary text-light")
+                $(hourArr[i]).removeClass("bg-danger").addClass("bg-secondary")
             }
             else if (currentHour === timeId) {
                 $(hourArr[i]).addClass("bg-danger")
             }         
         }
-    }, 5000);
+    }, 1000);
 
     // when save button is clicked this function sends the key and value to local storage
     $(".saveBtn").on("click", function() {
