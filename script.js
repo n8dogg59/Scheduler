@@ -15,7 +15,7 @@ $(document).ready(function() {
         }
         else if (currentHour === timeId) {
             $(hourArr[i]).addClass("bg-danger")
-        }         
+        }
     }
 
     // function funs every second to see if the hour has changed to set the background color
@@ -35,11 +35,8 @@ $(document).ready(function() {
 
     // when save button is clicked this function sends the key and value to local storage
     $(".saveBtn").on("click", function() {
-        console.log($(this).siblings(".col-10").val());
         var timeSave = $(this).siblings("textarea").attr("id");
-        console.log(timeSave);
         var taskSave = $(this).siblings(".col-10").val();
-        console.log(taskSave);
         localStorage.setItem(timeSave, taskSave)
     })
 
